@@ -30,16 +30,28 @@ console.log('trop long');
 		texte += "...";
 console.log(texte);
 		divs[i].innerHTML = texte;
+		divs[i].classList.add('rouge');
 	}
+
+	
 //    alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
 }
 
-var ul = document.ul.getElementsByTagName('li');
+var liste = document.getElementsByTagName('li');
+alert(liste.length);
+var ul = document.getElementById('mesElements');
 
 console.log(ul);
-var c = ul.lenght;
-alert(c);
-for (var i=0;i < c; i++){
-	console.log('un li');
-}
+console.log(ul.childNodes);
+console.log(ul.childNodes[3]);
+console.log(ul.children);
 
+var count = 0;
+for(var i, li; li=ul.childNodes[i]; i++) {
+   //if(li.tagName=='LI'){
+	console.log(li.tagName);
+	count++;
+      // traitement des li
+   //}
+}
+alert(count);
